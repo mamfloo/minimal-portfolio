@@ -3,9 +3,16 @@
 import { useTheme } from "next-themes"
 import { Button } from "./button"
 import { Moon, Sun } from "lucide-react"
+import { useEffect, useState } from "react";
 
 export function ModeToggle() {
+  const [mounted, setMounted] = useState(false);
   const { setTheme, theme } = useTheme();
+
+  useEffect(() => {
+    setTheme('dark');
+    setMounted(true);
+  },[])
 
   const changeMode = () => {
     if(theme === 'dark') {
@@ -15,7 +22,10 @@ export function ModeToggle() {
     }
   } 
 
-  
+  // If the component has not mounted, do not render anything
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <Button variant="link" size="icon" onClick={changeMode} className="text-muted-foreground pb-1 hover:text-primary">

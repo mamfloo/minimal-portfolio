@@ -1,3 +1,4 @@
+import Contact from "@/components/contact";
 import Info from "@/components/info";
 import Projects from "@/components/projects";
 

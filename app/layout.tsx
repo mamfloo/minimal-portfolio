@@ -3,6 +3,15 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import { ThemeProvider } from "@/components/ui/themProvider";
+import { Fredoka } from "next/font/google";
+import Contact from "@/components/contact";
+
+
+export const fredoka = Fredoka({
+  subsets: ["latin"],
+  weight: ["400"],
+  style: "normal",
+});
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,6 +37,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} bg-background scroll-smooth`}>
+        <div className="noise">
+
+        </div>
           <ThemeProvider
             attribute="class"
             defaultTheme="dark"
@@ -35,6 +47,7 @@ export default function RootLayout({
             disableTransitionOnChange>
               <Navbar></Navbar>
               {children}
+              <Contact></Contact>
           </ThemeProvider>
         
         </body>

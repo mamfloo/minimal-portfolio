@@ -33,6 +33,8 @@
     --ring: 255, 7%, 11%;
  
     --radius: 0.5rem;
+
+    --footerColor: 15, 5%, 84%
   }
  
   .dark {
@@ -64,6 +66,7 @@
     --input: 231, 0%, 18%, 1;
     --ring: 212.7 26.8% 83.9%;
 
+    --footerColor: 0, 0%, 5%
   }
 }
  
@@ -76,12 +79,31 @@
   }
 }
 
+html {
+  min-height: 100%;
+}
+
 body {
-  height: 100vh;
+  position: relative;
   margin: 0px;
 }
 
 *, html {
-
   scroll-behavior: smooth !important;
+}
+
+.noise {
+  background-image: url(../public/noise.png);
+  background-repeat: repeat;
+  opacity: 0.5;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  z-index: -10;
+}
+
+.dark .noise {
+  filter: invert(0.6);
 }
