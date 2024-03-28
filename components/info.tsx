@@ -10,13 +10,13 @@ export default function Info() {
         <div className='flex flex-col'>
             <h1 className={`${fredoka.className} text-6xl font-semibold mb-2`}>nick bubuioc</h1>
             <div className='flex gap-2 justify-start'>
-                <Link href={"mailto:info@nickbubuioc.dev"} className="text-muted-foreground hover:text-primary hover:scale-100 scale-90">
+                <Link href={"mailto:info@nickbubuioc.dev"} target='_blank' className="text-muted-foreground hover:text-primary hover:scale-100 scale-90">
                     <Mail />
                 </Link>
-                <Link href={"#"} className="text-muted-foreground hover:text-primary hover:scale-100 scale-90">
+                <Link href={"https://github.com/mamfloo"} target='_blank' className="text-muted-foreground hover:text-primary hover:scale-100 scale-90">
                     <Github />
                 </Link>
-                <Link href={"#"} className="text-muted-foreground hover:text-primary hover:scale-100 scale-90">
+                <Link href={"https://discordapp.com/users/254951048437956610"} target='_blank' className="text-muted-foreground hover:text-primary hover:scale-100 scale-90">
                     <BsDiscord size={25} />
                 </Link>
             </div>

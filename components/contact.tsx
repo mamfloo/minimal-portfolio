@@ -16,10 +16,10 @@ export default function Contact() {
                     info@nickbubuioc.dev
                 </Link>
                 <div className='flex gap-2 justify-start'>
-                    <Link href={"#"} className="text-muted-foreground hover:text-primary hover:scale-100 scale-90">
+                    <Link href={"https://github.com/mamfloo"} target='_blank' className="text-muted-foreground hover:text-primary hover:scale-100 scale-90">
                         <Github />
                     </Link>
-                    <Link href={"#"} className="text-muted-foreground hover:text-primary hover:scale-100 scale-90">
+                    <Link href={"https://discordapp.com/users/254951048437956610"} target='_blank' className="text-muted-foreground hover:text-primary hover:scale-100 scale-90">
                         <BsDiscord size={25} />
                     </Link>
                 </div>

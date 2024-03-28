@@ -44,7 +44,7 @@ export default function ProjectCard({project}: {project: Project}) {
         <Card className="border-0 shadow-none hover:cursor-pointer"
             onClick={() => router.push("/project/" + project.name)}>
           <CardHeader className="flex flex-col items-center p-1">
-            <Image src={image} alt="project-image" className="mb-3 rounded-md"/>
+            <Image src={image} alt="project-image" className="mb-3 rounded-md shadow-md"/>
             <CardTitle className="mt-8">{project.descriptionName}</CardTitle>
             <CardDescription className="text-primary">{project.description.length > 200 ? project.description.slice(0, 200).concat("...") : project.description}</CardDescription>
           </CardHeader>
